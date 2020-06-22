@@ -49,13 +49,16 @@ In this lambda, we increment the referral invitedUsers field and increase amount
 ## Sign In flow:
 
 After user signIn using Cognito's services, we will get the JWT token which we will use to get the user's data.
+
 *Fun fact: We don't send any userId to API Gateway, all of the info needed is taken from the token payload.*
 In response, we will find amount, invitedUsers, and userId.
+
 To generate the invation link frontEnd can run:
     const  invitationLink = `${window.location.origin}?referralId=${user.id}`
 
 ## Front end:
 Seems cool... in theoryyyyyyyyyyyy... boring... we want to click and test...
+
 So I decided to make a minimalist demo =>  https://bonusreferall.web.app/
 
 Front end part is done using ReactJs + Amplify (AWS services).
@@ -68,7 +71,9 @@ To run it:
 
 ## Automation tests:
 For every edit that I made, I would have needed at least 6 emails ** every time** to test the whole flow.
+
 We want to make sure that we don't break the system when we edit code, so it's time for automation testing.
+
 I have used [mocha](https://www.npmjs.com/package/mocha) framework, tests can be found [here](https://github.com/reni1111/referralSystem-AWS/blob/master/client/test/Test.js).
 
 To run the tests:
