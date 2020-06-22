@@ -1,0 +1,7 @@
+{
+  "app": "node bin/app.js",
+  "context": {
+    "@aws-cdk/core:enableStackNameDuplicates": "true",
+    "aws-cdk:enableDiffNoFail": "true"
+  }
+}

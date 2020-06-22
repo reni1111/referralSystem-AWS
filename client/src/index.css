@@ -1,0 +1,23 @@
+body{
+  font-size: 20px;
+}
+
+.flexAlignCenter{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.copyButton{
+  font-size: 18px;
+  background-color: #30a7c6; /* Green */
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border-radius: 7px;
+}
