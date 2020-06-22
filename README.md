@@ -24,6 +24,7 @@ The whole application is implemented by the principle "Infrastructure as Code", 
 1. Add to env your amazon keys
 2. run `npm install`  
 3. `cdk deploy usersStack`
+
 You are done :)
 
 If you are looking only for Lambda's codes go at folder => Lambda
@@ -38,7 +39,6 @@ Since having referrals is a custom flow for Cognito, we will be using:
  2. Post Confirmation Lambda trigger => [postConfirmationLambda](https://github.com/reni1111/referralSystem-AWS/blob/master/lambda/postConfirmationLambda/index.js)
 
 **Pre Sign-up** to check if the value of referralId is correct (if the user exists...).
-
 If the user added a fake value he will be returned to signUp again and nothing will be stored.
 
 **Post Confirmation** is triggered when the user submits their verification code so this is the right time to add this user to our table. (here we know our user isn't a random bot)
