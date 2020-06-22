@@ -1,4 +1,4 @@
-//amplify needs this for auth on node endearment
+//amplify needs this for auth on node environment
 global.fetch = require("node-fetch");
 
 const assert = require('assert');
@@ -218,6 +218,7 @@ describe('Amitree', function () {
   })
 
   it('Delete all test accounts', async function () {
+    // deletes the tests account from our db
     // sends ALL request at the same time (asynchronous...)
     let deletedAccounts = await Promise.all(
       users.map(async (user)=> await deleteUser(user.token))
