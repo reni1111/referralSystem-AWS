@@ -8,7 +8,7 @@ We will be building this infrastructure.
 
 ![infrastructure](https://firebasestorage.googleapis.com/v0/b/bonusreferall.appspot.com/o/Amitree%20%287%29.png?alt=media&token=47e36421-827b-4375-916d-312d63b5416d)
 
-![infrastructure](https://firebasestorage.googleapis.com/v0/b/bonusreferall.appspot.com/o/SignIn.png?alt=media&token=6196f764-fb5b-43f0-a6c3-5ca265d56f66)
+![infrastructure](https://firebasestorage.googleapis.com/v0/b/bonusreferall.appspot.com/o/SignIn%20(1).png?alt=media&token=6aa90fa1-33a8-4bbc-b2cf-0a9e91b20825)
 
 Tools used: 
 1. Cognito - Authentication service
