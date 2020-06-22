@@ -38,11 +38,15 @@ Since having referrals is a custom flow for Cognito, we will be using:
  2. Post Confirmation Lambda trigger => [postConfirmationLambda](https://github.com/reni1111/referralSystem-AWS/blob/master/lambda/postConfirmationLambda/index.js)
 
 **Pre Sign-up** to check if the value of referralId is correct (if the user exists...).
+
 If the user added a fake value he will be returned to signUp again and nothing will be stored.
 
 **Post Confirmation** is triggered when the user submits their verification code so this is the right time to add this user to our table. (here we know our user isn't a random bot)
+
 If the user doesn't have a referral we will add amount 0$.
+
 If the user has a referral we will add amount 10\$ and send the referralId to SQS (queue), this message will be consumed by our lambda [sqsConsumerReferralBonus](https://github.com/reni1111/referralSystem-AWS/blob/master/lambda/sqsConsumerReferralBonus/index.js).
+
 In this lambda, we increment the referral invitedUsers field and increase amount by 10$ if invitedUsers%5 ==0 (for every 5 people). 
 
 
@@ -51,6 +55,7 @@ In this lambda, we increment the referral invitedUsers field and increase amount
 After user signIn using Cognito's services, we will get the JWT token which we will use to get the user's data.
 
 *Fun fact: We don't send any userId to API Gateway, all of the info needed is taken from the token payload.*
+
 In response, we will find amount, invitedUsers, and userId.
 
 To generate the invation link frontEnd can run:
@@ -82,7 +87,7 @@ To run the tests:
 3. run `npm run test`
 Enjoy
 
-Problems:
+Problem:
 To test the flow I needed to signUp and then confirm by using verification code send to the email, automating opening of the email, and getting the code can be tricky...
 
 Solution:
