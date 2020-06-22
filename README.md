@@ -86,6 +86,7 @@ To run the tests:
 1. open folder *client*
 2. run `npm install`
 3. run `npm run test`
+
 Enjoy
 
 Problem:
