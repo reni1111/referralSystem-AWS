@@ -9,7 +9,7 @@
     "aws-amplify": "^2.2.2",
     "aws-amplify-react": "https://github.com/reni1111/aws-amplify-react-fork.git",
     "mocha": "^8.0.1",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^3.1.1",
     "query-string": "^6.13.1",
     "react": "^16.12.0",
     "react-copy-to-clipboard": "^5.0.2",
